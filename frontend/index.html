@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Binghomestay Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">B</div>
+        <div>
+          <h1>Binghomestay Support</h1>
+          <p class="status" id="status"><span class="dot" id="statusDot"></span><span id="statusText">Checking...</span></p>
+        </div>
+      </div>
+      <button type="button" class="btn-new" id="newChat">New chat</button>
+    </header>
+
+    <div class="banner" id="humanBanner" role="status" hidden>
+      A member of our team has been flagged to help you. Please include your booking details so they can assist quickly.
+    </div>
+
+    <main class="messages" id="messages" role="log" aria-live="polite" aria-label="Conversation"></main>
+
+    <div class="chips" id="chips" aria-label="Suggested questions"></div>
+
+    <form class="composer" id="form" autocomplete="off">
+      <label for="input" class="sr-only">Type your message</label>
+      <textarea id="input" rows="1" placeholder="Type your message... (Enter to send, Shift+Enter for new line)" maxlength="2000"></textarea>
+      <button type="submit" id="send" class="btn-send" aria-label="Send message">Send</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
